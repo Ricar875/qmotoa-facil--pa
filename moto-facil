@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moto Fácil PA — Artes de Divulgação</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #111;
+    font-family: 'DM Sans', sans-serif;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #F5C518;
+    font-size: 28px;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-family: 'Space Mono', monospace;
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .card-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .card-label {
+    font-family: 'Space Mono', monospace;
+    color: #444;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  /* ═══ ARTE 1 — LANÇAMENTO ═══ */
+  .arte1 {
+    width: 480px;
+    height: 480px;
+    background: #030303;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .arte1 .bg-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(245,197,24,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,197,24,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .arte1 .top-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #F5C518, #E8A000, #F5C518);
+    box-shadow: 0 0 20px rgba(245,197,24,0.6);
+  }
+  .arte1 .top-bar2 {
+    position: absolute;
+    top: 4px; left: 0; right: 0;
+    height: 1px;
+    background: rgba(245,197,24,0.2);
+  }
+
+  .arte1 .diagonal-slash {
+    position: absolute;
+    top: -60px; right: -80px;
+    width: 320px; height: 480px;
+    background: linear-gradient(135deg, rgba(245,197,24,0.07) 0%, transparent 50%);
+    transform: rotate(8deg);
+  }
+
+  .arte1 .badge-city {
+    position: absolute;
+    top: 28px; left: 28px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245,197,24,0.08);
+    border: 1px solid rgba(245,197,24,0.25);
+    padding: 5px 14px 5px 6px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 8px 100%);
+  }
+  .arte1 .badge-city .dot {
+    width: 18px; height: 18px;
+    background: #F5C518;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 4px 100%);
+  }
+  .arte1 .badge-city span {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #F5C518;
+    font-weight: 700;
+  }
+
+  .arte1 .coming-soon {
+    position: absolute;
+    top: 60px; right: 28px;
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #333;
+  }
+
+  .arte1 .hero-text {
+    position: absolute;
+    left: 28px;
+    top: 110px;
+  }
+  .arte1 .hero-text .em-breve {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #F5C518;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .arte1 .hero-text .em-breve::before {
+    content: '';
+    display: block;
+    width: 24px; height: 1px;
+    background: #F5C518;
+  }
+
+  .arte1 .hero-text .moto {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 108px;
+    line-height: 0.82;
+    color: #fff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 80px rgba(245,197,24,0.08);
+  }
+  .arte1 .hero-text .facil {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 108px;
+    line-height: 0.82;
+    color: #F5C518;
+    letter-spacing: 3px;
+    text-shadow: 0 0 60px rgba(245,197,24,0.5), 0 0 120px rgba(245,197,24,0.2);
+    position: relative;
+  }
+  .arte1 .hero-text .facil::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0; right: 0;
+    height: 3px;
+    background: #F5C518;
+    box-shadow: 0 0 16px #F5C518;
+  }
+  .arte1 .hero-text .pa {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 6px;
+    color: #444;
+    margin-top: 14px;
+  }
+
+  /* MOTO SILHOUETTE SVG */
+  .arte1 .moto-silhouette {
+    position: absolute;
+    bottom: 60px; right: -10px;
+    width: 200px;
+    opacity: 0.12;
+    animation: float1 4s ease-in-out infinite;
+  }
+
+  /* RIDER FIGURE */
+  .arte1 .rider-figure {
+    position: absolute;
+    bottom: 0; right: 20px;
+    width: 180px;
+    height: 300px;
+  }
+
+  .arte1 .bottom-band {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 80px;
+    background: #F5C518;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    gap: 16px;
+    justify-content: space-between;
+  }
+  .arte1 .bottom-band .tagline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: #000;
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+  .arte1 .bottom-band .zero {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    color: #000;
+    letter-spacing: 1px;
+    text-align: right;
+    line-height: 1;
+  }
+  .arte1 .bottom-band .zero small {
+    display: block;
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: rgba(0,0,0,0.5);
+  }
+
+  /* STATS ROW */
+  .arte1 .stats-row {
+    position: absolute;
+    bottom: 92px; left: 28px;
+    display: flex;
+    gap: 0;
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+    padding: 10px 0;
+  }
+  .arte1 .stat-item {
+    padding: 0 20px 0 0;
+    border-right: 1px solid #1e1e1e;
+    margin-right: 20px;
+  }
+  .arte1 .stat-item:last-child { border-right: none; margin-right: 0; }
+  .arte1 .stat-val {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: #F5C518;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+  .arte1 .stat-lbl {
+    font-family: 'Space Mono', monospace;
+    font-size: 7px;
+    letter-spacing: 2px;
+    color: #444;
+    margin-top: 2px;
+  }
+
+  /* ═══ ARTE 2 — MOTOQUEIRO ═══ */
+  .arte2 {
+    width: 480px;
+    height: 480px;
+    background: #F5C518;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .arte2 .bg-dark {
+    position: absolute;
+    top: 0; right: 0;
+    width: 55%;
+    height: 100%;
+    background: #050505;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .arte2 .grid-overlay {
+    position: absolute;
+    top: 0; right: 0;
+    width: 55%;
+    height: 100%;
+    background-image:
+      linear-gradient(rgba(245,197,24,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,197,24,0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .arte2 .top-accent {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: #030303;
+  }
+
+  .arte2 .left-content {
+    position: absolute;
+    left: 28px;
+    top: 40px;
+    width: 200px;
+  }
+
+  .arte2 .logo-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  .arte2 .logo-hex {
+    width: 36px; height: 36px;
+    background: #000;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .arte2 .logo-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: #000;
+    letter-spacing: 3px;
+    line-height: 1;
+  }
+  .arte2 .logo-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 7px;
+    color: rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+    margin-top: 2px;
+  }
+
+  .arte2 .cta-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: rgba(0,0,0,0.5);
+    margin-bottom: 8px;
+  }
+  .arte2 .cta-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 0.88;
+    color: #000;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  .arte2 .benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .arte2 .benefit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .arte2 .benefit .check {
+    width: 18px; height: 18px;
+    background: #000;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px;
+    color: #F5C518;
+    flex-shrink: 0;
+    clip-path: polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 4px 100%, 0 calc(100% - 4px));
+  }
+  .arte2 .benefit span {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: #000;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+  .arte2 .right-content {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px 24px;
+  }
+
+  .arte2 .uniform-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 20px;
+  }
+
+  /* RIDER SVG UNIFORM */
+  .arte2 .rider-svg {
+    width: 160px;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.8));
+    animation: float1 3.5s ease-in-out infinite;
+  }
+
+  .arte2 .uniform-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #333;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .arte2 .price-tag {
+    background: rgba(245,197,24,0.1);
+    border: 1px solid rgba(245,197,24,0.3);
+    padding: 12px 16px;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+    text-align: center;
+  }
+  .arte2 .price-tag .val {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #F5C518;
+    letter-spacing: 2px;
+  }
+  .arte2 .price-tag .lbl {
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    color: #555;
+    letter-spacing: 2px;
+  }
+
+  /* ═══ ARTE 3 — CLIENTE ═══ */
+  .arte3 {
+    width: 480px;
+    height: 480px;
+    background: #070707;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .arte3 .gold-top {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #F5C518 30%, #E8A000 70%, transparent);
+    box-shadow: 0 0 20px rgba(245,197,24,0.5);
+  }
+
+  .arte3 .noise {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .arte3 .center-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(245,197,24,0.06) 0%, transparent 70%);
+  }
+
+  .arte3 .top-row {
+    position: absolute;
+    top: 28px; left: 28px; right: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .arte3 .logo-inline {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .arte3 .logo-icon {
+    width: 32px; height: 32px;
+    background: #F5C518;
+    clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .arte3 .logo-words {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  .arte3 .logo-words span { color: #F5C518; }
+  .arte3 .badge-new {
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #F5C518;
+    border: 1px solid rgba(245,197,24,0.3);
+    padding: 4px 10px;
+    background: rgba(245,197,24,0.07);
+    animation: blink 2s ease-in-out infinite;
+  }
+
+  .arte3 .center-content {
+    position: absolute;
+    left: 28px; right: 28px;
+    top: 50%;
+    transform: translateY(-55%);
+    text-align: center;
+  }
+  .arte3 .phone-emoji {
+    font-size: 64px;
+    display: block;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 30px rgba(245,197,24,0.4));
+    animation: float1 3s ease-in-out infinite;
+  }
+  .arte3 .headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 62px;
+    line-height: 0.88;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+    text-shadow: 0 0 60px rgba(245,197,24,0.1);
+  }
+  .arte3 .headline .gold { color: #F5C518; text-shadow: 0 0 40px rgba(245,197,24,0.5); }
+  .arte3 .sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: #555;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  .arte3 .sub strong { color: #F5C518; font-weight: 500; }
+
+  .arte3 .features-row {
+    position: absolute;
+    bottom: 90px; left: 28px; right: 28px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .arte3 .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .arte3 .feat-icon {
+    width: 40px; height: 40px;
+    background: rgba(245,197,24,0.08);
+    border: 1px solid rgba(245,197,24,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px));
+  }
+  .arte3 .feat-lbl {
+    font-family: 'Space Mono', monospace;
+    font-size: 7px;
+    letter-spacing: 2px;
+    color: #444;
+    text-align: center;
+  }
+
+  .arte3 .bottom-strip {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    justify-content: space-between;
+    border-top: 1px solid #1a1a1a;
+  }
+  .arte3 .app-soon {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #F5C518;
+  }
+  .arte3 .city-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #333;
+  }
+  .arte3 .stars-row {
+    display: flex; gap: 3px;
+  }
+  .arte3 .stars-row span { color: #F5C518; font-size: 14px; }
+
+  /* ═══ ANIMATIONS ═══ */
+  @keyframes float1 {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.4; }
+  }
+
+  /* INSTRUCTION CARD */
+  .instruction {
+    background: #0c0c0c;
+    border: 1px solid #1e1e1e;
+    border-left: 3px solid #F5C518;
+    border-radius: 8px;
+    padding: 16px 20px;
+    max-width: 480px;
+    width: 100%;
+  }
+  .instruction h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #F5C518;
+    margin-bottom: 8px;
+  }
+  .instruction p {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #555;
+    line-height: 2;
+  }
+</style>
+</head>
+<body>
+
+<h1>MOTO FÁCIL PA — ARTES</h1>
+<p class="subtitle">3 PEÇAS PRONTAS PARA POSTAR · INSTAGRAM / FACEBOOK / WHATSAPP</p>
+
+<div class="grid">
+
+  <!-- ═══════════════════════════════ ARTE 1 ═══ -->
+  <div class="card-wrap">
+    <div class="card-label">Arte 01 · Em Breve · Feed/Story</div>
+
+    <div class="arte1">
+      <div class="bg-lines"></div>
+      <div class="top-bar"></div>
+      <div class="top-bar2"></div>
+      <div class="diagonal-slash"></div>
+
+      <div class="badge-city">
+        <div class="dot">📍</div>
+        <span>PAULO AFONSO — BA</span>
+      </div>
+
+      <div class="coming-soon">EM BREVE · 2025</div>
+
+      <div class="hero-text">
+        <div class="em-breve">EM BREVE</div>
+        <div class="moto">MOTO</div>
+        <div class="facil">FÁCIL</div>
+        <div class="pa">PA · PREMIUM · PAULO AFONSO</div>
+      </div>
+
+      <!-- Moto SVG watermark -->
+      <svg class="moto-silhouette" viewBox="0 0 300 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="62" cy="115" r="40" stroke="#F5C518" stroke-width="8"/>
+        <circle cx="62" cy="115" r="22" stroke="#F5C518" stroke-width="4"/>
+        <circle cx="238" cy="115" r="40" stroke="#F5C518" stroke-width="8"/>
+        <circle cx="238" cy="115" r="22" stroke="#F5C518" stroke-width="4"/>
+        <path d="M62 75 L100 40 L170 35 L220 55 L238 75" stroke="#F5C518" stroke-width="8" stroke-linecap="round" fill="none"/>
+        <path d="M100 40 L110 20 L190 20 L210 40" stroke="#F5C518" stroke-width="6" stroke-linecap="round" fill="#F5C518" fill-opacity="0.3"/>
+        <path d="M62 75 L238 75" stroke="#F5C518" stroke-width="6" stroke-linecap="round"/>
+        <path d="M220 55 L270 70 L260 80 L238 75" stroke="#F5C518" stroke-width="5" fill="#F5C518" fill-opacity="0.3"/>
+        <path d="M150 40 L155 15 L185 20" stroke="#F5C518" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+
+      <!-- Rider SVG figure -->
+      <svg class="rider-figure" viewBox="0 0 160 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Helmet -->
+        <ellipse cx="80" cy="42" rx="32" ry="36" fill="#1a1a1a" stroke="#F5C518" stroke-width="2"/>
+        <ellipse cx="80" cy="42" rx="24" ry="18" fill="#0a0a0a"/>
+        <rect x="56" y="36" width="48" height="12" rx="4" fill="#F5C518" opacity="0.15"/>
+        <!-- visor stripe -->
+        <rect x="54" y="48" width="52" height="4" rx="2" fill="#F5C518" opacity="0.4"/>
+
+        <!-- Body / jacket -->
+        <path d="M48 78 L40 160 L120 160 L112 78 C108 68 96 62 80 62 C64 62 52 68 48 78Z" fill="#141414" stroke="#F5C518" stroke-width="1.5"/>
+        <!-- Yellow stripes on jacket -->
+        <path d="M50 80 L44 130" stroke="#F5C518" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+        <path d="M110 80 L116 130" stroke="#F5C518" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+        <path d="M55 95 L105 95" stroke="#F5C518" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+        <!-- Logo on jacket -->
+        <text x="80" y="120" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="11" fill="#F5C518" letter-spacing="1">MF PA</text>
+
+        <!-- Arms -->
+        <path d="M48 80 L20 120 L35 128 L60 95" fill="#141414" stroke="#F5C518" stroke-width="1.5"/>
+        <path d="M112 80 L140 120 L125 128 L100 95" fill="#141414" stroke="#F5C518" stroke-width="1.5"/>
+
+        <!-- Gloves -->
+        <ellipse cx="22" cy="122" rx="14" ry="10" fill="#F5C518" transform="rotate(-20 22 122)"/>
+        <ellipse cx="138" cy="122" rx="14" ry="10" fill="#F5C518" transform="rotate(20 138 122)"/>
+
+        <!-- Legs / pants -->
+        <path d="M55 160 L50 240 L72 240 L80 185 L88 240 L110 240 L105 160Z" fill="#0d0d0d" stroke="#333" stroke-width="1"/>
+        <!-- Knee stripe -->
+        <rect x="50" y="185" width="20" height="6" rx="3" fill="#F5C518" opacity="0.6"/>
+        <rect x="90" y="185" width="20" height="6" rx="3" fill="#F5C518" opacity="0.6"/>
+
+        <!-- Boots -->
+        <rect x="44" y="235" width="28" height="20" rx="4" fill="#1a1a1a" stroke="#F5C518" stroke-width="1.5"/>
+        <rect x="88" y="235" width="28" height="20" rx="4" fill="#1a1a1a" stroke="#F5C518" stroke-width="1.5"/>
+      </svg>
+
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-val">48+</div>
+          <div class="stat-lbl">parceiros</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">0%</div>
+          <div class="stat-lbl">comissão</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">24h</div>
+          <div class="stat-lbl">disponível</div>
+        </div>
+      </div>
+
+      <div class="bottom-band">
+        <div class="tagline">SEM COMISSÃO<br>POR CORRIDA</div>
+        <div class="zero">0%<small>de taxa</small></div>
+      </div>
+    </div>
+
+    <div class="instruction">
+      <h3>Como usar — Arte 01</h3>
+      <p>
+        📸 TIRE PRINT DESTA ARTE (botão direito → salvar)<br>
+        📱 POST NO INSTAGRAM como imagem quadrada<br>
+        📝 LEGENDA SUGERIDA:<br>
+        "🏍️ Novidade chegando em Paulo Afonso!<br>
+        Moto Fácil PA — o moto táxi premium sem comissão.<br>
+        Motoqueiro valorizado. Passageiro bem atendido.<br>
+        Em breve no ar. Salva esse post! 🔖<br>
+        #MotofacilPA #PauloAfonso #MotoTaxi"
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ARTE 2 ═══ -->
+  <div class="card-wrap">
+    <div class="card-label">Arte 02 · Recrutamento Motoqueiro · Feed</div>
+
+    <div class="arte2">
+      <div class="bg-dark"></div>
+      <div class="grid-overlay"></div>
+      <div class="top-accent"></div>
+
+      <div class="left-content">
+        <div class="logo-mark">
+          <div class="logo-hex">🏍</div>
+          <div>
+            <div class="logo-text">MOTO FÁCIL</div>
+            <div class="logo-sub">PA PREMIUM</div>
+          </div>
+        </div>
+
+        <div class="cta-label">para motoqueiros</div>
+        <div class="cta-title">SEJA<br>PAR<br>CEIRO</div>
+
+        <div class="benefits">
+          <div class="benefit">
+            <div class="check">✓</div>
+            <span>SEM COMISSÃO</span>
+          </div>
+          <div class="benefit">
+            <div class="check">✓</div>
+            <span>MENSALIDADE FIXA</span>
+          </div>
+          <div class="benefit">
+            <div class="check">✓</div>
+            <span>APP EXCLUSIVO</span>
+          </div>
+          <div class="benefit">
+            <div class="check">✓</div>
+            <span>SUPORTE TOTAL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div></div>
+
+        <!-- Rider uniform SVG -->
+        <div class="uniform-showcase">
+          <svg class="rider-svg" viewBox="0 0 160 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Helmet premium -->
+            <ellipse cx="80" cy="44" rx="34" ry="38" fill="#111" stroke="#F5C518" stroke-width="2.5"/>
+            <path d="M46 44 Q46 20 80 18 Q114 20 114 44" fill="#0a0a0a" stroke="#F5C518" stroke-width="1"/>
+            <!-- visor -->
+            <path d="M50 48 Q80 62 110 48" stroke="#F5C518" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M50 48 Q80 58 110 48 L110 56 Q80 66 50 56Z" fill="rgba(245,197,24,0.12)"/>
+            <!-- helmet top stripe -->
+            <path d="M62 12 L80 8 L98 12" stroke="#F5C518" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+            <!-- Jacket body -->
+            <path d="M46 82 L38 170 L122 170 L114 82 C110 70 97 64 80 64 C63 64 50 70 46 82Z" fill="#121212" stroke="#333" stroke-width="1"/>
+
+            <!-- GOLD chest stripes — the uniform identity -->
+            <rect x="42" y="84" width="10" height="70" rx="3" fill="#F5C518"/>
+            <rect x="108" y="84" width="10" height="70" rx="3" fill="#F5C518"/>
+
+            <!-- Shoulder epaulettes -->
+            <path d="M46 84 L34 94 L38 104 L46 100Z" fill="#F5C518"/>
+            <path d="M114 84 L126 94 L122 104 L114 100Z" fill="#F5C518"/>
+
+            <!-- Chest plate -->
+            <rect x="56" y="90" width="48" height="36" rx="4" fill="#1a1a1a" stroke="#F5C518" stroke-width="1"/>
+            <!-- Logo on chest -->
+            <text x="80" y="104" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="9" fill="#F5C518" letter-spacing="2">MOTO</text>
+            <text x="80" y="116" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="9" fill="#F5C518" letter-spacing="2">FÁCIL</text>
+            <rect x="60" y="118" width="40" height="1" fill="#F5C518" opacity="0.5"/>
+            <text x="80" y="126" text-anchor="middle" font-family="'Space Mono', monospace" font-size="6" fill="rgba(245,197,24,0.6)" letter-spacing="1">PA</text>
+
+            <!-- Arms -->
+            <path d="M46 84 L22 126 L36 134 L58 98" fill="#121212" stroke="#222" stroke-width="1"/>
+            <path d="M114 84 L138 126 L124 134 L102 98" fill="#121212" stroke="#222" stroke-width="1"/>
+
+            <!-- Arm stripes -->
+            <path d="M32 112 L42 96" stroke="#F5C518" stroke-width="5" stroke-linecap="round"/>
+            <path d="M128 112 L118 96" stroke="#F5C518" stroke-width="5" stroke-linecap="round"/>
+
+            <!-- Gloves -->
+            <ellipse cx="24" cy="130" rx="13" ry="9" fill="#F5C518" transform="rotate(-25 24 130)"/>
+            <ellipse cx="136" cy="130" rx="13" ry="9" fill="#F5C518" transform="rotate(25 136 130)"/>
+
+            <!-- Pants -->
+            <path d="M53 170 L48 252 L72 252 L80 200 L88 252 L112 252 L107 170Z" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
+            <rect x="48" y="195" width="22" height="5" rx="2" fill="#F5C518" opacity="0.7"/>
+            <rect x="90" y="195" width="22" height="5" rx="2" fill="#F5C518" opacity="0.7"/>
+
+            <!-- Boots -->
+            <rect x="42" y="247" width="30" height="22" rx="5" fill="#1a1a1a" stroke="#F5C518" stroke-width="1.5"/>
+            <rect x="88" y="247" width="30" height="22" rx="5" fill="#1a1a1a" stroke="#F5C518" stroke-width="1.5"/>
+            <!-- boot stripe -->
+            <rect x="42" y="256" width="30" height="4" fill="#F5C518" opacity="0.6"/>
+            <rect x="88" y="256" width="30" height="4" fill="#F5C518" opacity="0.6"/>
+          </svg>
+          <div class="uniform-label">UNIFORME OFICIAL</div>
+        </div>
+
+        <div class="price-tag">
+          <div class="val">R$ 99<small style="font-size:16px">/mês</small></div>
+          <div class="lbl">mensalidade · sem comissão</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="instruction">
+      <h3>Como usar — Arte 02</h3>
+      <p>
+        📸 TIRE PRINT DESTA ARTE<br>
+        📱 POST NO INSTAGRAM / FACEBOOK<br>
+        📝 LEGENDA SUGERIDA:<br>
+        "🏍️ Motoqueiro de Paulo Afonso!<br>
+        Chega de dar comissão. Aqui você paga<br>
+        mensalidade fixa e fica com TUDO da corrida.<br>
+        Cadastre-se agora: [seu link ou WhatsApp]<br>
+        #MotofacilPA #MotoTaxi #PauloAfonso #Bahia"
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ARTE 3 ═══ -->
+  <div class="card-wrap">
+    <div class="card-label">Arte 03 · Cliente / App · Story/Feed</div>
+
+    <div class="arte3">
+      <div class="gold-top"></div>
+      <div class="noise"></div>
+      <div class="center-glow"></div>
+
+      <!-- Grid lines -->
+      <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.04" viewBox="0 0 480 480">
+        <defs>
+          <pattern id="g" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#F5C518" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="480" height="480" fill="url(#g)"/>
+      </svg>
+
+      <div class="top-row">
+        <div class="logo-inline">
+          <div class="logo-icon">🏍</div>
+          <div>
+            <div class="logo-words">MOTO <span>FÁCIL</span></div>
+            <div style="font-family:'Space Mono',monospace;font-size:7px;color:#444;letter-spacing:2px">PA PREMIUM</div>
+          </div>
+        </div>
+        <div class="badge-new">● EM BREVE</div>
+      </div>
+
+      <div class="center-content">
+        <span class="phone-emoji">📱</span>
+        <div class="headline">PEÇA SUA<br><span class="gold">MOTO</span></div>
+        <div class="headline" style="font-size:42px;color:#555">em segundos</div>
+        <div class="sub">
+          Moto táxi <strong>premium</strong> em Paulo Afonso.<br>
+          Rápido, seguro e sem complicação.
+        </div>
+      </div>
+
+      <div class="features-row">
+        <div class="feature">
+          <div class="feat-icon">⚡</div>
+          <div class="feat-lbl">rápido</div>
+        </div>
+        <div class="feature">
+          <div class="feat-icon">⭐</div>
+          <div class="feat-lbl">avaliado</div>
+        </div>
+        <div class="feature">
+          <div class="feat-icon">💬</div>
+          <div class="feat-lbl">whatsapp</div>
+        </div>
+        <div class="feature">
+          <div class="feat-icon">🛡</div>
+          <div class="feat-lbl">seguro</div>
+        </div>
+        <div class="feature">
+          <div class="feat-icon">📍</div>
+          <div class="feat-lbl">local</div>
+        </div>
+      </div>
+
+      <div class="bottom-strip">
+        <div class="app-soon">APP EM BREVE</div>
+        <div class="stars-row">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="city-tag">PAULO AFONSO · BA</div>
+      </div>
+    </div>
+
+    <div class="instruction">
+      <h3>Como usar — Arte 03</h3>
+      <p>
+        📸 TIRE PRINT DESTA ARTE<br>
+        📱 POST NO INSTAGRAM / WHATSAPP STATUS<br>
+        📝 LEGENDA SUGERIDA:<br>
+        "🛵 Moto táxi premium chegando em PA!<br>
+        Chame sua moto pelo app, rápido e seguro.<br>
+        Parceiros avaliados, sem surpresas.<br>
+        Curte pra chegar logo! 👇<br>
+        #MotofacilPA #PauloAfonso #AppDeMotos"
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<p style="text-align:center;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:3px;color:#222;margin:60px 0 20px">
+  © 2025 MOTO FÁCIL PA PREMIUM · PAULO AFONSO, BAHIA
+</p>
+
+</body>
+</html>
+
