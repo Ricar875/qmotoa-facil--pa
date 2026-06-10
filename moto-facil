@@ -965,7 +965,23 @@
 </div>
 
 <p style="text-align:center;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:3px;color:#222;margin:60px 0 20px">
-  © 2025 MOTO FÁCIL PA PREMIUM · PAULO AFONSO, BAHIA
+  © 2025 MOTO FÁCIL PA PREMIUM · PAULO AFONSO, BAHIA{
+  "name": "moto-facil-pa",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.4.0"
+  }
+}
 </p>
 
 </body>
